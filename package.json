@@ -6,9 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Julien Folliot",
+  "license": "MIT",
+  "description": "11ty starter for my web projects",
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0"
