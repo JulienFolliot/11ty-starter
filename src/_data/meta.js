@@ -6,9 +6,15 @@ export const locale = 'fr_FR';
 export const lang = 'fr';
 export const creator = {
     name: 'Julien Folliot', // i.e. Lene Saile - creator's (developer) name.
-    email: 'hello@julien-folliot',
+    email: 'hello@julien-folliot.fr',
     website: 'https://www.julien-folliot.fr',
     social: 'https://www.linkedin.com/in/julien-folliot-dev/'
+};
+export const designer = {
+    name: 'Julie Vuillaume', // i.e. Lene Saile - creator's (developer) name.
+    email: 'hello@julie-vuillaume.fr',
+    website: 'https://www.julie-vuillaume.fr',
+    social: 'https://www.linkedin.com/in/julie-vuillaume44000/'
 };
 export const pathToSvgLogo = 'src/assets/svg/misc/logo.svg'; // used for favicon generation
 export const themeColor = '#DD4462'; //  Manifest: defines the default theme color for the application

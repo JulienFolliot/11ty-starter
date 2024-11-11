@@ -4,9 +4,14 @@ eleventyExcludeFromCollections: true
 excludeFromSitemap: true
 ---
 
-/* TEAM */ Developer: {{ meta.creator.name }} Contact: {{ meta.creator.email }} Site:
-{{ meta.creator.website }}
-{% if meta.creator.social %}
-  Find me on: {{ meta.creator.social }}
-{% endif %}
+/* TEAM */ 
+        Developer: {{ meta.creator.name }} 
+        Contact: {{ meta.creator.email }} 
+        Site: {{ meta.creator.website }}
+        {% if meta.creator.social %}Find me on: {{ meta.creator.social }}{% endif %}
+
+        Designer: {{ meta.designer.name }} 
+        Contact: {{ meta.designer.email }} 
+        Site: {{ meta.designer.website }}
+        {% if meta.designer.social %}Find me on: {{ meta.designer.social }}{% endif %}
 /* SITE */ Doctype: HTML5
