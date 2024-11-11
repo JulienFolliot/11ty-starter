@@ -117,6 +117,11 @@ export default async function(eleventyConfig) {
 		  return htmlmin.minify(imageElement, {collapseWhitespace: true});
 	});
 
+	// Files copy
+	eleventyConfig.addPassthroughCopy({
+		'src/assets/images/favicon/*': '/',
+	});
+
 };
 
 export const config = {
