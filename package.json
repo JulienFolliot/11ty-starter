@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "favicons": "node ./src/_config/setup/generate-favicons.js",
+    "start": "cross-env ELEVENTY_ENV=development eleventy --serve --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,6 +13,17 @@
   "description": "11ty starter for my web projects",
   "type": "module",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^5.0.0",
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "cssnano": "^7.0.6",
+    "dotenv": "^16.4.5",
+    "html-minifier-terser": "^7.2.0",
+    "postcss": "^8.4.48",
+    "postcss-import": "^16.1.0",
+    "postcss-import-ext-glob": "^2.1.1",
+    "sharp": "^0.33.5",
+    "sharp-ico": "^0.1.5"
   }
 }
