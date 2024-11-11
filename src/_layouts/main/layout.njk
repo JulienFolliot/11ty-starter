@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="{{ meta.lang }}">
+<head>
+    <!-- 1 charset/viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 2 title -->
+    <title>
+      {%- if title -%}
+        {{- title -}}
+      {%- else -%}
+        {{- meta.siteName -}}
+      {%- endif -%}
+    </title>
+      
+    <base href="{{ page.url }}" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "{{ meta.url }}#website",
+            "url": "{{ meta.url }}",
+            "name": "{{ meta.siteName }}",
+            "description": "{{ meta.siteDescription }}",
+            "inLanguage": "{{ meta.locale }}"
+          }
+        ]
+      }
+    </script>
+
+    {%- if eleventy.env.runMode === "serve" %}
+      <!-- External CSS for local dev (refresh without page reload) -->
+      <link rel="stylesheet" href="{% getBundleFileUrl "css", "global" %}">
+      <link rel="stylesheet" href="{% getBundleFileUrl "css", "inline" %}">
+    {%- else  %}
+      <!-- Inlined CSS (fastest site performance in production)  -->
+      <style>{% getBundle "css", "global" %}</style>
+      <style>{% getBundle "css", "inline" %}</style>
+    {%- endif %}
+
+    {% css "global" %}{% include "./global.css" %}{% endcss %}
+
+    {% include "head/meta.njk" %}
+
+</head>
+
+  <body class="{{ layout }}">
+    {% include "header/layout.njk" %}
+
+    <main id="main" class="flow">{{ content | safe }}</main>
+
+    {% include "footer/layout.njk" %}
+  </body>
+
+
+</html>
