@@ -1,0 +1,138 @@
+<script type="application/ld+json">
+      [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "{{ meta.url }}#website",
+            "url": "{{ meta.url }}",
+            "name": "{{ meta.siteName | safe }}",
+            "description": "{{ meta.siteDescription | safe }}",
+            "inLanguage": "{{ meta.locale }}"
+          }
+            "@type": "HomeAndConstructionBusiness",
+            "@id": "{{ meta.url }}#localbusiness",
+            "name": "{{ meta.contact.name }}",
+            "email": "{{ meta.contact.email }}",
+            "knowsAbout": "Isolation, plâtrerie, pose de menuiseries intérieures",
+            "telephone": "{{ meta.contact.phone.raw }}",
+            "logo": "{{ meta.url }}/favicon.svg",
+            "image": [
+                "{{ meta.url }}{{ meta.chantiers[0].image }}",
+                "{{ meta.url }}{{ meta.chantiers[1].image }}"
+            ],
+            "sameAs": [
+                "https://www.pagesjaunes.fr/pros/56586368",
+                "https://artisans.quelleenergie.fr/belbeuf/b-et-j-pires",
+                "https://www.linkedin.com/company/b&j-pires/about/",
+                "https://heero.fr/artisans/81849772900025/"
+            ],
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 49.449176979383374,
+                "longitude": 1.11125275313945
+            },
+            "areaServed": [
+            {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 49.449176979383374,
+                    "longitude": 1.11125275313945
+                },
+                "geoRadius": 50000
+            },
+              {
+                "@type": "City",
+                "name": "Rouen"
+              },
+              { "@type": "City", "name": "Le Havre" },
+                { "@type": "City", "name": "Évreux" },
+                { "@type": "City", "name": "Dieppe" },
+                { "@type": "City", "name": "Sotteville-lès-Rouen" },
+                { "@type": "City", "name": "Saint-Étienne-du-Rouvray" },
+                { "@type": "City", "name": "Le Grand-Quevilly" },
+                { "@type": "City", "name": "Le Petit-Quevilly" },
+                { "@type": "City", "name": "Mont-Saint-Aignan" },
+                { "@type": "City", "name": "Elbeuf" },
+                { "@type": "City", "name": "Canteleu" },
+                { "@type": "City", "name": "Oissel" },
+                { "@type": "City", "name": "Bois-Guillaume" },
+                { "@type": "City", "name": "Maromme" },
+                { "@type": "City", "name": "Barentin" },
+                { "@type": "City", "name": "Darnétal" },
+                { "@type": "City", "name": "Bourg-Achard" },
+                { "@type": "City", "name": "Caudebec-lès-Elbeuf" },
+                { "@type": "City", "name": "Cléon" },
+                { "@type": "City", "name": "Déville-lès-Rouen" },
+                { "@type": "City", "name": "Fécamp" },
+                { "@type": "City", "name": "Forges-les-Eaux" },
+                { "@type": "City", "name": "Gisors" },
+                { "@type": "City", "name": "Harfleur" },
+                { "@type": "City", "name": "Lillebonne" },
+                { "@type": "City", "name": "Louviers" },
+                { "@type": "City", "name": "Montivilliers" },
+                { "@type": "City", "name": "Notre-Dame-de-Bondeville" },
+                { "@type": "City", "name": "Pont-Audemer" },
+                { "@type": "City", "name": "Pont-de-l'Arche" },
+                { "@type": "City", "name": "Saint-Aubin-lès-Elbeuf" },
+                { "@type": "City", "name": "Saint-Marcel" },
+                { "@type": "City", "name": "Val-de-Reuil" },
+                { "@type": "City", "name": "Yvetot" },
+                { "@type": "City", "name": "Bolbec" },
+                { "@type": "City", "name": "Bernay" },
+                { "@type": "City", "name": "Lillebonne" },
+                { "@type": "City", "name": "Eu" },
+                { "@type": "City", "name": "Neufchâtel-en-Bray" },
+                { "@type": "City", "name": "Pavilly" },
+                { "@type": "City", "name": "Petit-Couronne" }
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "{{ meta.contact.address.street }}",
+                "addressLocality": "{{ meta.contact.address.locality }}",
+                "addressRegion": "{{ meta.contact.address.region }}",
+                "postalCode": "{{ meta.contact.address.postalCode }}",
+                "addressCountry": "{{ meta.contact.address.countryCode }}"
+              },
+              "makesOffer": [
+                    {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Isolation",
+                        "description": "Optimisation de l’efficacité thermique et acoustique de l'habitat."
+                    }
+                    },
+                    {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Plâtrerie",
+                        "description": "Habillage des murs ou plafonds bruts, pose de cloisons sèches."
+                    }
+                    },
+                    {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Pose de menuiseries intérieures",
+                        "description": "Pose de portes (ouvrantes à la française, coulissantes à galandage ou en applique, invisibles, placards), verrières et claustras."
+                    }
+                    }
+                ],
+                "openingHoursSpecification": [
+                    {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "08:00",
+                    "closes": "18:00"
+                    }
+                ]
+            }
+        ]
+    </script>
+
+
+
+
+   

@@ -1,0 +1,92 @@
+:root {
+
+    /* COLORS */
+    --rubble-100: #ff5d06;
+    --rubble-80: #FF7D38;
+    --rubble-60: #FF9D6A;
+    --rubble-40: #FFBE9B;
+    --rubble-20: #FFDECD;
+
+    --cast-iron-100: #171717;
+    --cast-iron-80: #454545;
+    --cast-iron-60: #747474;
+    --cast-iron-40: #A2A2A2;
+    --cast-iron-20: #D1D1D1;
+
+    --iron-100: #52565C;
+    --iron-80: #75787D;
+    --iron-60: #979A9D;
+    --iron-40: #BABBBE;
+    --iron-20: #DCDDDE;
+
+    --stone-100: #D8D8D8;
+    --stone-80: #E0E0E0;
+    --stone-60: #E8E8E8;
+    --stone-40: #EFEFEF;
+    --stone-20: #F9F9F9;
+    --stone-20-specified: #F7F7F7;
+
+    --plaster: #FFFFFF;
+
+    /* FONT FAMILIES */
+    --azo-font-family: 'azo';
+
+    /* PIXEL REM CONVERSION */
+    ---3px: -0.1875rem;
+    ---2px: -0.125rem;
+    ---1px: -0.0625rem;
+    --1px: 0.0625rem;
+    --2px: 0.125rem;
+    --3px: 0.1875rem;
+    --4px: 0.25rem;
+    --8px: 0.5rem;
+    --12px: 0.75rem;
+    --14px: 0.875rem;
+    --15px: 0.9375rem;
+    --16px: 1rem;
+    --17px: 1.0625rem;
+    --18px: 1.125rem;
+    --19px: 1.1875rem;
+    --20px: 1.25rem;
+    --21px: 1.3125rem;
+    --24px: 1.5rem;
+    --25px: 1.5625rem;
+    --30px: 1.875rem;
+    --32px: 2rem;
+    --36px: 2.25rem;
+    --40px: 2.5rem;
+    --42px: 2.625rem;
+    --48px: 3rem;
+    --58px: 3.625rem;
+    --50px: 3.125rem;
+    --52px: 3.25rem;
+    --64px: 4rem;
+    --70px: 4.375rem;
+    --72px: 4.5rem;
+    --76px: 4.75rem;
+    --80px: 5rem;
+    --100px: 6.25rem;
+    --108px: 6.75rem;
+    --160px: 10rem;
+    --170px: 10.625rem;
+    --454px: 28.375rem;
+    --480px: 30rem;
+    --560px: 35rem;
+    --768px: 48rem;
+    --864px: 54rem;
+    --1170px: 73.125rem;
+
+    /* FONT WEIGHTS */
+    --bold: 700;
+    --medium: 600;
+    --regular: 400; // A remplacer par normal
+
+    /* MAIN PARTS DIMENSIONS */
+    --header-height: var(--108px);
+    @media(max-width: 54rem) {
+        --header-height: var(--70px);
+    }
+    --max-content-width: var(--1170px);
+    --default-vertical-padding: var(--70px);
+    
+}

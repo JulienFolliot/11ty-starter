@@ -4,20 +4,36 @@ export const siteDescription = 'A custom starter kit for 11ty website projects';
 export const siteType = 'Person';
 export const locale = 'fr_FR';
 export const lang = 'fr';
+export const contact = {
+    name: "",
+    phone: {
+        pretty: "",
+        raw: "+336"
+    },
+    email: "",
+    address: {
+        pretty: "",
+        street: "",
+        locality: "",
+        region: "",
+        postalCode: "",
+        countryCode: ""
+    }
+};
 export const creator = {
-    name: 'Julien Folliot', // i.e. Lene Saile - creator's (developer) name.
+    name: 'Julien Folliot',
     email: 'hello@julien-folliot.fr',
     website: 'https://www.julien-folliot.fr',
     social: 'https://www.linkedin.com/in/julien-folliot-dev/'
 };
 export const designer = {
-    name: 'Julie Vuillaume', // i.e. Lene Saile - creator's (developer) name.
+    name: 'Julie Vuillaume',
     email: 'hello@julie-vuillaume.fr',
     website: 'https://www.julie-vuillaume.fr',
     social: 'https://www.linkedin.com/in/julie-vuillaume44000/'
 };
-export const pathToSvgLogo = 'src/assets/svg/misc/logo.svg'; // used for favicon generation
-export const themeColor = '#DD4462'; //  Manifest: defines the default theme color for the application
-export const themeBgColor = '#FBFBFB'; // Manifest: defines a placeholder background color for the application page to display before its stylesheet is loaded
-export const opengraph_default = '/assets/images/template/opengraph-default.jpg'; // fallback/default meta image
-export const opengraph_default_alt = siteDescription; // alt text for default meta image"
+export const pathToSvgLogo = 'src/assets/svg/misc/logo.svg';
+export const themeColor = '#DD4462';
+export const themeBgColor = '#FBFBFB';
+export const opengraph_default = '/assets/images/template/opengraph-default.jpg';
+export const opengraph_default_alt = siteDescription;

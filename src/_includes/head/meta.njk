@@ -11,8 +11,13 @@
 <meta name="description" content="{{ metaDescription }}" />
 <meta name="theme-color" content="{{ meta.themeColor }}" />
 <!-- Search Engines -->
-<meta name="robots" content="index,follow" />
-<meta name="googlebot" content="index,follow" />
+{%- if ('preprod' in meta.url) or ('netlify' in meta.url) -%}
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="googlebot" content="noindex,nofollow" />
+{%- else -%}
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
+{%- endif -%}
 <!-- Made with Eleventy! -->
 <meta name="generator" content="{{ eleventy.generator }}" />
 <!-- Disable automatic detection and formatting of possible phone numbers -->
@@ -88,4 +93,5 @@
 <link rel="icon" href="{{ '/favicon.ico' | url }}" sizes="any" />
 <link rel="icon" href="{{ '/favicon.svg' | url }}" type="image/svg+xml" />
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | url }}" />
-<link rel="manifest" href="{{ '/site.webmanifest' | url }}" />
+
+<!-- <link rel="manifest" href="{{ '/site.webmanifest' | url }}" /> -->

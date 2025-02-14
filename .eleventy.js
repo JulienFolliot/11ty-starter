@@ -12,14 +12,15 @@ import Image from "@11ty/eleventy-img";
 import path from 'node:path';
 
 import htmlmin from 'html-minifier-terser';
+import {minify} from 'terser';
 
 export default async function(eleventyConfig) {
 
 	eleventyConfig.addWatchTarget('./src/assets/**/*.{css,js,svg,png,jpeg,jpg}');
 
-	// CSS 
+	// CSS Bundle
 	eleventyConfig.addBundle('css', {
-		hoist: false,
+		hoist: true,
 		transforms: [
 			async function(content) {
 				// type contains the bundle name.
@@ -34,6 +35,23 @@ export default async function(eleventyConfig) {
 			}
 		]
 	});
+
+	// JS Bundle
+	eleventyConfig.addBundle('js', {
+		hoist: true,
+		transforms: [
+			async function (code) {
+				try {
+					const minified = await minify(code);
+					return minified.code;
+				} catch (err) {
+					console.error("Terser error: ", err);
+					// Fail gracefully.
+					return code;
+				}
+			}
+		]
+	})
 
 	const stringifyAttributes = attributeMap => {
 		return Object.entries(attributeMap)
@@ -120,6 +138,14 @@ export default async function(eleventyConfig) {
 	// Files copy
 	eleventyConfig.addPassthroughCopy({
 		'src/assets/images/favicon/*': '/',
+		'src/assets/images/*': '/assets/images/',
+		'src/assets/images/template/*': '/assets/images/template/',
+		'src/assets/images/partenaires/*': '/assets/images/partenaires/',
+		'src/assets/images/chantiers/*': '/assets/images/chantiers/',
+		'src/assets/fonts/**': '/assets/fonts/',
+		'src/assets/svg/*': '/assets/svg/',
+		'src/assets/svg/misc/*': '/assets/svg/misc/',
+		'src/assets/svg/icons/*': '/assets/svg/icons/',
 	});
 
 };

@@ -16,21 +16,7 @@
       
     <base href="{{ page.url }}" />
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "@id": "{{ meta.url }}#website",
-            "url": "{{ meta.url }}",
-            "name": "{{ meta.siteName }}",
-            "description": "{{ meta.siteDescription }}",
-            "inLanguage": "{{ meta.locale }}"
-          }
-        ]
-      }
-    </script>
+    {% include "schema/main.njk" %}
 
     {%- if eleventy.env.runMode === "serve" %}
       <!-- External CSS for local dev (refresh without page reload) -->
@@ -42,7 +28,9 @@
       <style>{% getBundle "css", "inline" %}</style>
     {%- endif %}
 
-    {% css "global" %}{% include "./global.css" %}{% endcss %}
+    <script>{% getBundle "js", "inline" %}</script>
+
+    {% include "style/style.njk" %}
 
     {% include "head/meta.njk" %}
 
@@ -51,7 +39,7 @@
   <body class="{{ layout }}">
     {% include "header/layout.njk" %}
 
-    <main id="main" class="flow">{{ content | safe }}</main>
+    <main id="main" class="flow {{class}}">{{ content | safe }}</main>
 
     {% include "footer/layout.njk" %}
   </body>
